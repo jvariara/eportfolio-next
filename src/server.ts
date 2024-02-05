@@ -3,6 +3,8 @@ import { getPayloadClient } from "./get-payload";
 import { nextApp, nextHandler } from "./next-utils";
 import * as trpcExpress from "@trpc/server/adapters/express";
 import { appRouter } from "./trpc";
+import nextBuild from "next/dist/build";
+import path from "path";
 
 const app = express();
 
@@ -25,6 +27,17 @@ const start = async () => {
       },
     },
   });
+
+  if(process.env.NEXT_BUILD){
+    app.listen(PORT, async() => {
+      payload.logger.info("Next.js is building for production")
+      // @ts-expect-error
+      await nextBuild(path.join(__dirname, "../"))
+      process.exit()
+    })
+
+    return
+  }
 
   app.use(
     "/api/trpc",

@@ -36,7 +36,7 @@ const Landing = () => {
           </h2>
           <div className="mt-4 space-y-6">
             <p className="text-muted-foreground text-2xl">
-              I'm a{" "}
+              I&apos;m a{" "}
               <span className="text-primary font-semibold">
                 Software Developer
               </span>{" "}

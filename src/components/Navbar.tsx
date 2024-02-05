@@ -26,7 +26,7 @@ const Navbar = () => {
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   {navLinks.map((item) => (
-                    <span className="text-center md:ml-8 md:my-0 my-7 text-xl relative">
+                    <span key={item.name} className="text-center md:ml-8 md:my-0 my-7 text-xl relative">
                       <a
                         href={item.href}
                         className="text-white duration-300 hover:underline-hover hover:text-primary"

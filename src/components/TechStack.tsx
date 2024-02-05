@@ -54,9 +54,8 @@ const TechStack = () => {
       
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 xs:gap-y-12 mx-4 mt-6">
         {technologies.map((tech) => (
-          <div className="flex items-center justify-center rounded-3xl border border-primary/20 bg-gradient-to-b from-primary to-primary/40 p-2.5">
+          <div key={tech.id} className="flex items-center justify-center rounded-3xl border border-primary/20 bg-gradient-to-b from-primary to-primary/40 p-2.5">
             <div
-              key={tech.id}
               className="flex max-w-[300px] w-full flex-col items-center justify-center rounded-2xl border border-primary/20 bg-muted group relative"
             >
               <div className="md:flex-shrink-0 flex justify-center p-6 transition-all duration-300">
