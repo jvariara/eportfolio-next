@@ -8,7 +8,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "justinvariara.com",
+        hostname: "www.justinvariara.com",
       },
     ],
   },
