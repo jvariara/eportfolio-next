@@ -35,7 +35,7 @@ const ImageSlider = ({ urls }: ImageSliderProps) => {
   const activeStyles =
     "active:scale-[0.97] grid opacity-100 hover:scale-105 absolute top-1/2 -translate-y-1/2 aspect-video h-8 w-8 z-50 place-items-center rounded-full border-2 bg-primary-foreground border-primary";
 
-  const inactiveStyles = "hidden text-red-400";
+  const inactiveStyles = "text-red-400";
 
   return (
     <div className="group relative bg-muted h-full overflow-hidden">

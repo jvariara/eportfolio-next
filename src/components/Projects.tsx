@@ -18,10 +18,10 @@ const Projects = () => {
 
   let map: (Project | null)[] = [];
   if (projects && projects.length) {
-    map = projects;
+    map = projects.reverse();
   } else if (isLoading) {
     // if loading set map to empty for skeleton loading state
-    map = new Array<null>(4).fill(null);
+    map = new Array<null>(2).fill(null);
   }
 
   return (
