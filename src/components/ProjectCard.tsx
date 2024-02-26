@@ -31,16 +31,16 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
 
   if (!project || (!isVisible && isMounted)) return <ProjectPlaceholder />;
 
-  const validUrls = project.images
-    .map(({ image }) => (typeof image === "string" ? image : image.url))
-    .filter(Boolean) as string[];
+  // const validUrls = project.images
+  //   .map(({ image }) => (typeof image === "string" ? image : image.url))
+  //   .filter(Boolean) as string[];
 
   if (isVisible && project) {
     return (
       <div className="flex items-center justify-center rounded-3xl border border-primary/20 bg-gradient-to-bl from-primary to-primary/40 p-2.5">
         <div className="flex max-w-[351px] flex-col items-start justify-center rounded-2xl border border-primary/20 bg-muted">
           <div className="relative aspect-video w-[350px] overflow-hidden rounded-t-2xl border-b border-b-primary/40">
-            <ImageSlider urls={validUrls} />
+            <ImageSlider urls={project.images} />
           </div>
           <div className="flex w-full items-center justify-between border-b border-b-primary/40 p-2.5">
             <span className="w-full bg-primary bg-clip-text text-lg font-bold text-transparent md:text-xl">

@@ -5,6 +5,7 @@ import ProjectCard from "./ProjectCard";
 import { Project } from "@/payload-types";
 import SectionHeading from "./SectionHeading";
 import { useEffect, useState } from "react";
+import { PROJECTS } from "@/config";
 
 const Projects = () => {
   const { data, isLoading } = trpc.getAllProjects.useQuery();
@@ -14,7 +15,8 @@ const Projects = () => {
     setIsMounted(true);
   }, []);
 
-  const projects = data?.projects.flat();
+  // const projects = data?.projects.flat();
+  const projects = PROJECTS
 
   let map: (Project | null)[] = [];
   if (projects && projects.length) {
