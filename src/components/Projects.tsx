@@ -20,6 +20,7 @@ const Projects = () => {
 
   let map: (Project | null)[] = [];
   if (projects && projects.length) {
+    // @ts-ignore
     map = projects.reverse();
   } else if (isLoading) {
     // if loading set map to empty for skeleton loading state
