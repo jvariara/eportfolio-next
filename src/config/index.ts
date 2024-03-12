@@ -24,6 +24,21 @@ export const navLinks = [
 export const PROJECTS = [
   {
     id: 1,
+    name: "UB Evaluation Tool",
+    description:
+      "Refactored and modernized UB CSE's current evaluation tool web application with usability in mind. Used for professors to create surveys/rubrics for students to evaluate their teammates for group assignments/project.",
+    tech: ["reactjs", "html", "css", "figma", "trello", "mysql", "php"],
+    images: [
+      "/images/ETool/EToolHome.png",
+      "/images/ETool/EToolHistory.png",
+      "/images/ETool/EToolLibrary.png",
+      "/images/ETool/EToolAddCourse.png",
+      "/images/ETool/EToolAddSurvey.png",
+      "/images/ETool/EToolViewResults.png",
+    ],
+  },
+  {
+    id: 2,
     name: "CircleUB",
     description:
       "A social media web application where students can find clubs throughout the university to join.",
@@ -39,7 +54,7 @@ export const PROJECTS = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     name: "DigitalHippo",
     github_url: "https://github.com/jvariara/digitalhippo",
     description:
@@ -54,7 +69,7 @@ export const PROJECTS = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     name: "Threads Clone",
     github_url: "https://github.com/jvariara/threads-clone",
     live_url: "https://threads-clone-one-tan.vercel.app/",
@@ -73,7 +88,7 @@ export const PROJECTS = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     name: "NFT Marketplace",
     live_url: "https://justin-internship.vercel.app/",
     description:
