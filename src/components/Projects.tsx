@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { PROJECTS } from "@/config";
 
 const Projects = () => {
-  const { data, isLoading } = trpc.getAllProjects.useQuery();
+  // const { data, isLoading } = trpc.getAllProjects.useQuery();
   const [isMounted, setIsMounted] = useState<boolean>(false);
 
   useEffect(() => {
@@ -21,11 +21,12 @@ const Projects = () => {
   let map: (Project | null)[] = [];
   if (projects && projects.length) {
     // @ts-ignore
-    map = projects.reverse();
-  } else if (isLoading) {
-    // if loading set map to empty for skeleton loading state
-    map = new Array<null>(2).fill(null);
-  }
+    map = projects;
+  } 
+  // else if (isLoading) {
+  //   // if loading set map to empty for skeleton loading state
+  //   map = new Array<null>(2).fill(null);
+  // }
 
   return (
     <section id="projects">
