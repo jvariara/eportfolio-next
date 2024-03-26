@@ -15,6 +15,49 @@ export const TECH_STACK = {
   github: "GitHub",
 };
 
+export const technologies = [
+  {
+    id: 1,
+    language: "React",
+    picture: "/languages/react.png",
+  },
+  {
+    id: 2,
+    language: "Next.js",
+    picture: "/languages/Next.js.png",
+  },
+  {
+    id: 3,
+    language: "JavaScript",
+    picture: "/languages/javascript.png",
+  },
+  {
+    id: 4,
+    language: "HTML5",
+    picture: "/languages/html5.png",
+  },
+  {
+    id: 5,
+    language: "CSS3",
+    picture: "/languages/css3.png",
+  },
+  {
+    id: 6,
+    language: "Python",
+    picture: "/languages/python.png",
+  },
+  {
+    id: 7,
+    language: "Java",
+    picture: "/languages/java.png",
+  },
+  {
+    id: 8,
+    language: "C",
+    picture: "/languages/c.png",
+  },
+];
+
 export const navLinks = [
   { name: "About", href: "/" },
   { name: "Projects", href: "#projects" },

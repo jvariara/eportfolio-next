@@ -1,3 +1,7 @@
+"use client";
+import { childrenVar, parentVariant } from "@/lib/utils";
+import { motion } from "framer-motion";
+
 interface SectionHeadingProps {
   title: string;
   subtitle: string;
@@ -5,14 +9,26 @@ interface SectionHeadingProps {
 
 const SectionHeading = ({ title, subtitle }: SectionHeadingProps) => {
   return (
-    <div className="flex flex-col justify-center items-center">
-      <h6 className="text-primary font-semibold text-3xl sm:text-4xl items-center">
+    <motion.div
+      variants={parentVariant(0.4, 0.4)}
+      whileInView="visible"
+      viewport={{ once: true }}
+      initial="hidden"
+      className="flex flex-col justify-center items-center"
+    >
+      <motion.h6
+        variants={childrenVar("vertical", "spring")}
+        className="text-primary font-semibold text-3xl sm:text-4xl items-center"
+      >
         {title}
-      </h6>
-      <h1 className="text-3xl md:text-4xl lg:text-5xl my-4 font-bold text-center text-white">
+      </motion.h6>
+      <motion.h1
+        variants={childrenVar("vertical", "spring")}
+        className="text-3xl md:text-4xl lg:text-5xl my-4 font-bold text-center text-white"
+      >
         {subtitle}
-      </h1>
-    </div>
+      </motion.h1>
+    </motion.div>
   );
 };
 

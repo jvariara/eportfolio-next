@@ -1,48 +1,9 @@
+"use client";
 import Image from "next/image";
 import SectionHeading from "./SectionHeading";
-
-const technologies = [
-  {
-    id: 1,
-    language: "React",
-    picture: "/languages/react.png",
-  },
-  {
-    id: 2,
-    language: "Next.js",
-    picture: "/languages/Next.js.png",
-  },
-  {
-    id: 3,
-    language: "JavaScript",
-    picture: "/languages/javascript.png",
-  },
-  {
-    id: 4,
-    language: "HTML5",
-    picture: "/languages/html5.png",
-  },
-  {
-    id: 5,
-    language: "CSS3",
-    picture: "/languages/css3.png",
-  },
-  {
-    id: 6,
-    language: "Python",
-    picture: "/languages/python.png",
-  },
-  {
-    id: 7,
-    language: "Java",
-    picture: "/languages/java.png",
-  },
-  {
-    id: 8,
-    language: "C",
-    picture: "/languages/c.png",
-  },
-];
+import { technologies } from "@/config";
+import { motion } from "framer-motion";
+import { childrenVar, parentVariant } from "@/lib/utils";
 
 const TechStack = () => {
   return (
@@ -51,13 +12,21 @@ const TechStack = () => {
         title={`<>Tech Stack</>`}
         subtitle="View my skills &amp; technologies below."
       />
-      
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 xs:gap-y-12 mx-4 mt-6">
+
+      <motion.div
+        variants={parentVariant(0.4, 0.3)}
+        whileInView="visible"
+        viewport={{ once: true }}
+        initial="hidden"
+        className="grid grid-cols-2 md:grid-cols-4 gap-8 xs:gap-y-12 mx-4 mt-6"
+      >
         {technologies.map((tech) => (
-          <div key={tech.id} className="flex items-center justify-center rounded-3xl border border-primary/20 bg-gradient-to-b from-primary to-primary/40 p-2.5">
-            <div
-              className="flex max-w-[300px] w-full flex-col items-center justify-center rounded-2xl border border-primary/20 bg-muted group relative"
-            >
+          <motion.div
+            variants={childrenVar("horizontal", "spring")}
+            key={tech.id}
+            className="flex items-center justify-center rounded-3xl border border-primary/20 bg-gradient-to-b from-primary to-primary/40 p-2.5"
+          >
+            <div className="flex max-w-[300px] w-full flex-col items-center justify-center rounded-2xl border border-primary/20 bg-muted group relative">
               <div className="md:flex-shrink-0 flex justify-center p-6 transition-all duration-300">
                 <div className="h-16 w-16 flex items-center justify-center text-primary">
                   <div>
@@ -75,9 +44,9 @@ const TechStack = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

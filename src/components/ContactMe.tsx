@@ -8,9 +8,10 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
 import { ContactValidation } from "@/lib/contact-vadliation";
-import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
+import { childrenVar, parentVariant } from "@/lib/utils";
 
 const ContactMe = () => {
   const router = useRouter();
@@ -59,14 +60,23 @@ const ContactMe = () => {
           subtitle="Let's get to talking!"
         />
 
-        <div className="flex items-center justify-center max-w-full rounded-3xl border border-primary/20 bg-gradient-to-bl from-primary to-primary/40 p-2.5 mt-6">
+        <motion.div
+          variants={parentVariant(0.5, 0.25)}
+          whileInView="visible"
+          viewport={{ once: true }}
+          initial="hidden"
+          className="flex items-center justify-center max-w-full rounded-3xl border border-primary/20 bg-gradient-to-bl from-primary to-primary/40 p-2.5 mt-6"
+        >
           <div className="flex flex-col items-start justify-center rounded-2xl border border-primary/20 bg-muted w-full p-2.5">
             <Form {...form}>
               <form
                 onSubmit={form.handleSubmit(onSubmit)}
                 className="flex flex-col w-full gap-y-4"
               >
-                <div className="flex items-center justify-between gap-x-6 w-full">
+                <motion.div
+                  variants={childrenVar("vertical", "tween")}
+                  className="flex items-center justify-between gap-x-6 w-full"
+                >
                   {/* name */}
                   <FormField
                     control={form.control}
@@ -102,31 +112,35 @@ const ContactMe = () => {
                       </FormItem>
                     )}
                   />
-                </div>
+                </motion.div>
 
                 {/* message */}
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Message</FormLabel>
-                      <FormControl>
-                        <Textarea
-                          rows={8}
-                          className="border border-primary bg-inherit text-base-regular text-white outline-none w-full"
-                          {...field}
-                        />
-                      </FormControl>
-                    </FormItem>
-                  )}
-                />
+                <motion.div variants={childrenVar("vertical", "tween")}>
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Message</FormLabel>
+                        <FormControl>
+                          <Textarea
+                            rows={8}
+                            className="border border-primary bg-inherit text-base-regular text-white outline-none w-full"
+                            {...field}
+                          />
+                        </FormControl>
+                      </FormItem>
+                    )}
+                  />
+                </motion.div>
 
-                <Button type="submit">Send it my way!</Button>
+                <motion.div variants={childrenVar("vertical", "tween")}>
+                  <Button type="submit">Send it my way!</Button>
+                </motion.div>
               </form>
             </Form>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
