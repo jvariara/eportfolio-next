@@ -55,9 +55,8 @@ const Footer = () => {
                 className="flex space-x-8"
               >
                 {navLinks.map((nav, i) => (
-                  <motion.div variants={childrenVar("vertical", "tween")}>
+                  <motion.div key={i} variants={childrenVar("vertical", "tween")}>
                     <Link
-                      key={i}
                       href={nav.href}
                       className="text-lg text-muted-foreground hover:text-primary"
                     >

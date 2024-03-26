@@ -77,10 +77,12 @@ const Landing = () => {
             className="flex flex-row gap-4 mt-6"
           >
             {links.map((link) => (
-              <motion.div variants={childrenVar("horizontal", "spring")}>
+              <motion.div
+                key={link.name}
+                variants={childrenVar("horizontal", "spring")}
+              >
                 <Link
                   href={link.href}
-                  key={link.name}
                   target="_blank"
                   className="text-center items-center group relative flex flex-col"
                 >

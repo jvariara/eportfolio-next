@@ -27,9 +27,9 @@ const Projects = () => {
         <div className="flex w-full flex-col items-center justify-start gap-5 mt-6">
           <div className="flex w-full flex-wrap items-start justify-center gap-10">
             {projects.map((project, i) => (
-              <motion.div variants={childrenVar("vertical", "spring")}>
+              <motion.div key={i} variants={childrenVar("vertical", "spring")}>
                 {/* @ts-ignore */}
-                <ProjectCard project={project} index={i} key={i} />
+                <ProjectCard project={project} index={i} />
               </motion.div>
             ))}
           </div>
