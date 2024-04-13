@@ -13,6 +13,9 @@ export const TECH_STACK = {
   mongodb: "MongoDB",
   tailwind_css: "Tailwind CSS",
   github: "GitHub",
+  postgresql: "PostgreSQL",
+  trpc: "tRPC",
+  openai: "OpenAI"
 };
 
 export const technologies = [
@@ -65,6 +68,23 @@ export const navLinks = [
 ];
 
 export const PROJECTS = [
+  {
+    id: 6,
+    name: "Transcribot",
+    description:
+      "Transcribot is a modern SaaS platform which integrates OpenAI to allow users to chat with audio files easily and effectively.",
+    tech: ["nextjs", "openai", "typescript", "tailwind_css", "postgresql", "prisma", "trpc"],
+    images: [
+      "/images/Transcribot/landing.png",
+      "/images/Transcribot/pricing.jpg",
+      "/images/Transcribot/dashboard.png",
+      "/images/Transcribot/upload.png",
+      "/images/Transcribot/chat.png",
+      "/images/Transcribot/subscription.png",
+    ],
+    live_url: "https://transcribot.vercel.app/",
+    github_url: "https://github.com/jvariara/transcribot",
+  },
   {
     id: 1,
     name: "UB Evaluation Tool",
