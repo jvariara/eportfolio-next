@@ -75,7 +75,7 @@ export const PROJECTS = [
       "Transcribot is a modern SaaS platform which integrates OpenAI to allow users to chat with audio files easily and effectively.",
     tech: ["nextjs", "openai", "typescript", "tailwind_css", "postgresql", "prisma", "trpc"],
     images: [
-      "/images/Transcribot/landing.png",
+      "/images/Transcribot/Landing.png",
       "/images/Transcribot/pricing.jpg",
       "/images/Transcribot/dashboard.png",
       "/images/Transcribot/upload.png",
