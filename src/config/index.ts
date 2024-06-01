@@ -15,7 +15,7 @@ export const TECH_STACK = {
   github: "GitHub",
   postgresql: "PostgreSQL",
   trpc: "tRPC",
-  openai: "OpenAI"
+  openai: "OpenAI",
 };
 
 export const technologies = [
@@ -69,11 +69,42 @@ export const navLinks = [
 
 export const PROJECTS = [
   {
+    id: 4,
+    name: "Snippy",
+    description:
+      "A code snippet application where users can upload and share their frequently used code snippets",
+    tech: [
+      "nextjs",
+      "typescript",
+      "tailwind_css",
+      "postgresql",
+      "prisma",
+      "trpc",
+    ],
+    images: [
+      "/images/Snippy/Landing.png",
+      "/images/Snippy/Dashboard.png",
+      "/images/Snippy/Create.png",
+      "/images/Snippy/Detail.png",
+      "/images/Snippy/Feed.png",
+    ],
+    live_url: "https://snippy-orpin.vercel.app/",
+    github_url: "https://github.com/jvariara/snippy",
+  },
+  {
     id: 6,
     name: "Transcribot",
     description:
       "Transcribot is a modern SaaS platform which integrates OpenAI to allow users to chat with audio files easily and effectively.",
-    tech: ["nextjs", "openai", "typescript", "tailwind_css", "postgresql", "prisma", "trpc"],
+    tech: [
+      "nextjs",
+      "openai",
+      "typescript",
+      "tailwind_css",
+      "postgresql",
+      "prisma",
+      "trpc",
+    ],
     images: [
       "/images/Transcribot/Landing.png",
       "/images/Transcribot/pricing.jpg",
@@ -129,25 +160,6 @@ export const PROJECTS = [
       "/images/DigitalHippo/DHCart.png",
       "/images/DigitalHippo/DHProduct.png",
       "/images/DigitalHippo/DHCheckout.png",
-    ],
-  },
-  {
-    id: 4,
-    name: "Threads Clone",
-    github_url: "https://github.com/jvariara/threads-clone",
-    live_url: "https://threads-clone-one-tan.vercel.app/",
-    description:
-      "A clone based off of the popular social media application Threads. Users can join and post a thread, and create/join a community of interest",
-    tech: ["nextjs", "tailwind_css", "mongodb", "typescript"],
-    images: [
-      "/images/Threads/ThreadsHome.png",
-      "/images/Threads/ThreadsCreate.png",
-      "/images/Threads/ThreadsActivity.png",
-      "/images/Threads/ThreadsSearch.png",
-      "/images/Threads/ThreadsCommunities.png",
-      "/images/Threads/ThreadsPost.png",
-      "/images/Threads/ThreadsCommunityPage.png",
-      "/images/Threads/ThreadsProfile.png",
     ],
   },
   {
